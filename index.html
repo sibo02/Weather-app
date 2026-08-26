@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+         <img src="images/logo.svg" alt="logo" class="weather-icon">
+          <button id="toggleUnits">Units</button>
+    </header>
+
+    <div class="container">
+        <h2 class="subtitle"> How's the sky looking today?</h2>
+        <form id="weatherForm">
+            <label for="cityInput" class="sr-only"></label>
+            <input type="text" id="cityInput" placeholder="Search for a place..." required>
+            <button type="submit">Search</button>  
+        </form>
+        <div id="weatherResult">
+          <section id="CurrentWeather">
+            <h3 id="cityName">Berlin, Germany</h3>
+            <p id="temperature">20°</p>
+            <img id="weatherImage" src="images/icon-sunny.webp" alt="Sunny">
+            <time datetime="2025-08-05">Tuesday, Aug 5, 2025</time>
+            <p id="feelsLike">feels like 18°</p>
+            <p id="humidity">Humidity 46%</p>
+            <p id="windSpeed">Wind Speed 14 km/h</p> 
+            <p id="precipitation">Precipitation 0 mm</p> 
+            </section>
+            <section id="dailyForecast">
+                <h3>Daily Forecast</h3>
+                <ul>
+                    <li>
+                        <p>Tue</p>
+                        <img src="images/icon-rain.webp" alt="Rainy">
+                        <p>20° 14°</p> 
+                    </li>
+                    <li>
+                        <p>Wed</p>
+                        <img src="images/icon-drizzle.webp" alt="Drizzle">
+                        <p>21° 15°</p>
+                    </li>
+                    <li>
+                        <p>Thu</p>
+                        <img src="images/icon-sunny.webp" alt="Sunny">
+                        <p>24° 14°</p>
+                    </li>
+                    <li>
+                        <p>Fri</p>
+                        <img src="images/icon-partly-cloudy.webp" alt="Partly Cloudy">
+                        <p>25° 13°</p>
+                    </li>
+                    <li>
+                        <p>Sat</p>
+                        <img src="images/icon-storm.webp" alt="Stormy">
+                        <p>21° 15°</p>
+                    </li>
+                    <li>
+                        <p>Sun</p>
+                        <img src="images/icon-snow.webp" alt="Snowy">
+                        <p>25° 16°</p>
+                    </li>
+                    <li>
+                        <p>Mon</p>
+                        <img src="images/icon-fog.webp" alt="Foggy">
+                        <p>24° 15°</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="hourlyForecast">
+               <h3>Hourly forecast</h3>
+              <button id="daySelector">Tuesday</button>
+            <ul>
+                <li>
+                 <p>3 PM</p>
+                   <img src="images/icon-overcast.webp" alt="Cloudy">
+                   <span>20°</span>
+                </li>
+            
+                <li>
+                    <p>4 PM</p>
+                    <img src="images/icon-partly-cloudy.webp" alt="partlyCloud">
+                    <span>20°</span>
+                </li>
+                <li>
+                    <p>5 PM</p>
+                    <img src="images/icon-sunny.webp" alt="sunny">
+                    <span>20°</span>
+                </li>
+                <li>
+                    <p>6 PM</p>
+                    <img src="images/icon-overcast.webp" alt="overcast">
+                    <span>19°</span>
+                </li>
+                <li>
+                    <p>7 PM</p>
+                    <img src="images/icon-snow.webp" alt="snow">
+                    <span>18°</span>
+                </li>
+                <li>
+                    <p>8 PM</p>
+                    <img src="images/icon-fog.webp" alt="foggy">
+                    <span>18°</span>
+                </li>
+                <li>
+                    <p>9 PM</p>
+                    <img src="images/icon-snow.webp" alt="snow">
+                    <span>17°</span>
+                </li>
+                <li>
+                    <p>10 PM</p>
+                    <img src="images/icon-overcast.webp" alt="overcast">
+                    <span>17°</span>
+                </li>
+
+            </ul>
+            </section>
+        </div>
+
+    </div>
+</body>
+</html>
