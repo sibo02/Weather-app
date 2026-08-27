@@ -13,111 +13,186 @@
 </head>
 <body>
     <header>
-         <img src="images/logo.svg" alt="logo" class="weather-icon">
-          <button id="toggleUnits">Units</button>
+        <h1 class="title sr-only">Weather Now</h1>
+        <img src="images/logo.svg" alt="logo" class="weather-icon">
+        <div class="units-dropdown">
+    <button id="toggleUnits" type="button">
+        <img src="images/icon-unit.svg" alt="">
+        Units
+        <img src="images/icon-chevron-down.svg" alt="">
+    </button>
+
+    <div class="units-menu">
+        <p class="menu-title">Switch to Imperial</p>
+
+        <div class="menu-group">
+            <label>Temperature</label>
+            <button class="option active">Celsius (°C)</button>
+            <button class="option">Fahrenheit (°F)</button>
+        </div>
+
+        <div class="menu-group">
+            <label>Wind Speed</label>
+            <button class="option active">km/h</button>
+            <button class="option">mph</button>
+        </div>
+
+        <div class="menu-group">
+            <label>Precipitation</label>
+            <button class="option active">Millimeters (mm)</button>
+            <button class="option">Inches (in)</button>
+        </div>
+    </div>
+</div>
+        
     </header>
 
     <div class="container">
         <h2 class="subtitle"> How's the sky looking today?</h2>
         <form id="weatherForm">
-            <label for="cityInput" class="sr-only"></label>
-            <input type="text" id="cityInput" placeholder="Search for a place..." required>
+            <label for="cityInput" class="sr-only">Search for a place</label>
+            <div class="search-input-wrapper">
+                <img src="images/icon-search.svg"  alt="search" class="search-icon">
+                <input type="text" id="cityInput" placeholder="Search for a place..." required>
+            </div>
             <button type="submit">Search</button>  
         </form>
         <div id="weatherResult">
+         <div class="left-column">
           <section id="CurrentWeather">
-            <h3 id="cityName">Berlin, Germany</h3>
-            <p id="temperature">20°</p>
-            <img id="weatherImage" src="images/icon-sunny.webp" alt="Sunny">
-            <time datetime="2025-08-05">Tuesday, Aug 5, 2025</time>
-            <p id="feelsLike">feels like 18°</p>
-            <p id="humidity">Humidity 46%</p>
-            <p id="windSpeed">Wind Speed 14 km/h</p> 
-            <p id="precipitation">Precipitation 0 mm</p> 
+             <div class="location-info">
+                <h3 id="cityName">Berlin, Germany</h3>
+                <time datetime="2025-08-05">Tuesday, Aug 5, 2025</time>
+             </div>
+            <div class="weather-info">
+                <p id="temperature">20°</p>
+                <img id="weatherImage" src="images/icon-sunny.webp" alt="Sunny" class="icon-large"> 
+            </div>
             </section>
+            <section id="weatherStats">
+               <div class="stat-card">
+                   <span class="stat-label">Feels Like</span>
+                      <p id="feelsLike">18°</p>
+                </div>
+
+                <div class="stat-card">
+                     <span class="stat-label">Humidity</span>
+                       <p id="humidity">46%</p>
+                </div>
+
+                <div class="stat-card">
+                      <span class="stat-label">Wind</span>
+                        <p id="windSpeed">14 km/h</p>
+                </div>
+
+                <div class="stat-card">
+                       <span class="stat-label">Precipitation</span>
+                         <p id="precipitation">0 mm</p>
+                </div>
+           </section>
             <section id="dailyForecast">
                 <h3>Daily Forecast</h3>
                 <ul>
                     <li>
                         <p>Tue</p>
-                        <img src="images/icon-rain.webp" alt="Rainy">
-                        <p>20° 14°</p> 
+                        <img src="images/icon-rain.webp" alt="Rainy" class="icon-small">
+                        <p><span class="high">20°</span> <span class="low">14°</span></p>
                     </li>
                     <li>
                         <p>Wed</p>
-                        <img src="images/icon-drizzle.webp" alt="Drizzle">
-                        <p>21° 15°</p>
+                        <img src="images/icon-drizzle.webp" alt="Drizzle" class="icon-small">
+                       
+                        <p><span class="high">21°</span> <span class="low">15°</span></p>
                     </li>
                     <li>
                         <p>Thu</p>
-                        <img src="images/icon-sunny.webp" alt="Sunny">
-                        <p>24° 14°</p>
+                        <img src="images/icon-sunny.webp" alt="Sunny" class="icon-small">
+                        <p><span class="high">24°</span> <span class="low">14°</span></p>
                     </li>
                     <li>
                         <p>Fri</p>
-                        <img src="images/icon-partly-cloudy.webp" alt="Partly Cloudy">
-                        <p>25° 13°</p>
+                        <img src="images/icon-partly-cloudy.webp" alt="Partly Cloudy" class="icon-small">
+                        <p><span class="high">25°</span> <span class="low">13°</span></p>
                     </li>
                     <li>
                         <p>Sat</p>
-                        <img src="images/icon-storm.webp" alt="Stormy">
-                        <p>21° 15°</p>
+                        <img src="images/icon-storm.webp" alt="Stormy" class="icon-small">
+                        <p><span class="high">21°</span> <span class="low">15°</span></p>
                     </li>
                     <li>
                         <p>Sun</p>
-                        <img src="images/icon-snow.webp" alt="Snowy">
-                        <p>25° 16°</p>
+                        <img src="images/icon-snow.webp" alt="Snowy" class="icon-small">
+                        <p><span class="high">25°</span> <span class="low">16°</span></p>
                     </li>
                     <li>
                         <p>Mon</p>
-                        <img src="images/icon-fog.webp" alt="Foggy">
-                        <p>24° 15°</p>
+                        <img src="images/icon-fog.webp" alt="Foggy" class="icon-small">
+                        <p><span class="high">24°</span> <span class="low">15°</span></p>
                     </li>
                 </ul>
             </section>
+            </div>
             <section id="hourlyForecast">
-               <h3>Hourly forecast</h3>
-              <button id="daySelector">Tuesday</button>
-            <ul>
+              <div class="forecast-header">
+                    <h3>Hourly forecast</h3>
+
+                  <div class="day-dropdown">
+                     <button id="daySelector" type="button">
+                         Tuesday
+                         <img src="images/icon-chevron-down.svg" alt="">
+                      </button>
+
+                   <div class="day-menu">
+                      <button>Monday</button>
+                      <button class="active">Tuesday</button>
+                      <button>Wednesday</button>
+                      <button>Thursday</button>
+                      <button>Friday</button>
+                      <button>Saturday</button>
+                      <button>Sunday</button>
+                    </div>
+                  </div>
+            </div>
+              <ul>
                 <li>
                  <p>3 PM</p>
-                   <img src="images/icon-overcast.webp" alt="Cloudy">
+                   <img src="images/icon-overcast.webp" alt="Cloudy" class="icon-small">
                    <span>20°</span>
                 </li>
             
                 <li>
                     <p>4 PM</p>
-                    <img src="images/icon-partly-cloudy.webp" alt="partlyCloud">
+                    <img src="images/icon-partly-cloudy.webp" alt="partlyCloud" class="icon-small">
                     <span>20°</span>
                 </li>
                 <li>
                     <p>5 PM</p>
-                    <img src="images/icon-sunny.webp" alt="sunny">
+                    <img src="images/icon-sunny.webp" alt="sunny" class="icon-small">
                     <span>20°</span>
                 </li>
                 <li>
                     <p>6 PM</p>
-                    <img src="images/icon-overcast.webp" alt="overcast">
+                    <img src="images/icon-overcast.webp" alt="overcast" class="icon-small">
                     <span>19°</span>
                 </li>
                 <li>
                     <p>7 PM</p>
-                    <img src="images/icon-snow.webp" alt="snow">
+                    <img src="images/icon-snow.webp" alt="snow" class="icon-small">
                     <span>18°</span>
                 </li>
                 <li>
                     <p>8 PM</p>
-                    <img src="images/icon-fog.webp" alt="foggy">
+                    <img src="images/icon-fog.webp" alt="foggy" class="icon-small">
                     <span>18°</span>
                 </li>
                 <li>
                     <p>9 PM</p>
-                    <img src="images/icon-snow.webp" alt="snow">
+                    <img src="images/icon-snow.webp" alt="snow" class="icon-small">
                     <span>17°</span>
                 </li>
                 <li>
                     <p>10 PM</p>
-                    <img src="images/icon-overcast.webp" alt="overcast">
+                    <img src="images/icon-overcast.webp" alt="overcast" class="icon-small">
                     <span>17°</span>
                 </li>
 
