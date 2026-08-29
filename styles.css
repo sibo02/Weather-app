@@ -289,10 +289,14 @@ header {
     display:none;
     z-index:100;
 }
+.units-menu.open {
+    display: block;
+}
 
 .day-menu{
     width:140px;
     padding:.5rem;
+    display: block;
 
 }
 
