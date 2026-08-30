@@ -292,11 +292,13 @@ header {
 .units-menu.open {
     display: block;
 }
-
+.day-menu.open{
+    display:block;
+}
 .day-menu{
     width:140px;
     padding:.5rem;
-    display: block;
+    
 
 }
 
